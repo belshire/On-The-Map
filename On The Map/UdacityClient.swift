@@ -15,6 +15,7 @@ class UdacityClient: NSObject {
     /* Authentication state */
     var sessionID : String? = nil
     var userID : String? = nil
+    var user : UdacityUser? = nil
     
     override init() {
         session = NSURLSession.sharedSession()
@@ -35,7 +36,7 @@ class UdacityClient: NSObject {
         
         /* 4. Make the request */
         let task = session.dataTaskWithRequest(request) {data, response, downloadError in
-            
+
             /* 5/6. Parse the data and use the data (happens in completion handler) */
             if let error = downloadError {
                 let newError = UdacityClient.errorForData(data, response: response, error: error)
@@ -76,8 +77,7 @@ class UdacityClient: NSObject {
                 let newError = UdacityClient.errorForData(data, response: response, error: error)
                 completionHandler(result: nil, error: downloadError)
             } else {
-                let newData = data.subdataWithRange(NSMakeRange(5, data.length - 5))
-                UdacityClient.parseJSONWithCompletionHandler(newData, completionHandler: completionHandler)
+                UdacityClient.parseJSONWithCompletionHandler(data, completionHandler: completionHandler)
             }
         }
         
@@ -118,8 +118,9 @@ class UdacityClient: NSObject {
     class func parseJSONWithCompletionHandler(data: NSData, completionHandler: (result: AnyObject!, error: NSError?) -> Void) {
         
         var parsingError: NSError? = nil
+        let newData = data.subdataWithRange(NSMakeRange(5, data.length - 5))
         
-        let parsedResult: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &parsingError)
+        let parsedResult: AnyObject? = NSJSONSerialization.JSONObjectWithData(newData, options: NSJSONReadingOptions.AllowFragments, error: &parsingError)
         
         if let error = parsingError {
             completionHandler(result: nil, error: error)

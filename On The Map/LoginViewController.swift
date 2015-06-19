@@ -37,12 +37,16 @@ class LoginViewController: UIViewController {
         if !usernameTextField.text.isEmpty && !passwordTextField.text.isEmpty {
             UdacityClient.sharedInstance().loginWithUsernameAndPassword(usernameTextField.text, password: passwordTextField.text) { (success, error) in
                 if success {
-                    println(UdacityClient.sharedInstance().sessionID!)
-                    println(UdacityClient.sharedInstance().userID!)
+                    dispatch_async(dispatch_get_main_queue(), {
+                        let controller = self.storyboard!.instantiateViewControllerWithIdentifier("MapTabController") as! UITabBarController
+                        self.presentViewController(controller, animated: true, completion: nil)
+                    })
                 }
                 else {
-                    self.errorLabel.text? = error!.localizedDescription
-                    self.errorLabel.hidden = false
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.errorLabel.text? = error!.localizedDescription
+                        self.errorLabel.hidden = false
+                    })
                 }
             }
         }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A076DCE61B3351FD00EBA6CC /* UdacityUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A076DCE51B3351FD00EBA6CC /* UdacityUser.swift */; };
+		A076DCE81B34A4D000EBA6CC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A076DCE71B34A4D000EBA6CC /* MapViewController.swift */; };
+		A076DCEA1B34A9CD00EBA6CC /* CustomNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A076DCE91B34A9CD00EBA6CC /* CustomNavigationBarView.swift */; };
 		A0D1C0481B2D28CD00BEB680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1C0471B2D28CD00BEB680 /* AppDelegate.swift */; };
 		A0D1C04A1B2D28CD00BEB680 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1C0491B2D28CD00BEB680 /* LoginViewController.swift */; };
 		A0D1C04D1B2D28CD00BEB680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D1C04B1B2D28CD00BEB680 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		A076DCE51B3351FD00EBA6CC /* UdacityUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityUser.swift; sourceTree = "<group>"; };
+		A076DCE71B34A4D000EBA6CC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A076DCE91B34A9CD00EBA6CC /* CustomNavigationBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarView.swift; sourceTree = "<group>"; };
 		A0D1C0421B2D28CD00BEB680 /* On The Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On The Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D1C0461B2D28CD00BEB680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0D1C0471B2D28CD00BEB680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 		A0D1C0681B2F284800BEB680 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A076DCE91B34A9CD00EBA6CC /* CustomNavigationBarView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				A0D1C0491B2D28CD00BEB680 /* LoginViewController.swift */,
+				A076DCE71B34A4D000EBA6CC /* MapViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -276,9 +282,11 @@
 				A076DCE61B3351FD00EBA6CC /* UdacityUser.swift in Sources */,
 				A0D1C06E1B2F5FF500BEB680 /* UdacityClient.swift in Sources */,
 				A0D1C0701B2F618F00BEB680 /* UdacityConstants.swift in Sources */,
+				A076DCEA1B34A9CD00EBA6CC /* CustomNavigationBarView.swift in Sources */,
 				A0D1C04A1B2D28CD00BEB680 /* LoginViewController.swift in Sources */,
 				A0D1C0721B2F796900BEB680 /* UdacityConvenience.swift in Sources */,
 				A0D1C0481B2D28CD00BEB680 /* AppDelegate.swift in Sources */,
+				A076DCE81B34A4D000EBA6CC /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

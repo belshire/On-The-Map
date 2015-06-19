@@ -35,7 +35,11 @@ extension UdacityClient {
                     if let user = JSONResult.valueForKey(UdacityClient.JSONResponseKeys.Account) as? [String: AnyObject] {
                         self.userID = user[UdacityClient.JSONResponseKeys.UserID] as? String
                         
-                        completionHandler(success: true, error: nil)
+                        self.getUserData(self.userID!) { success, error in
+                            if success {
+                                completionHandler(success: true, error: nil)
+                            }
+                        }
                     }
                 } else {
                     completionHandler(success: false, error: NSError(domain: "startSession",
@@ -47,14 +51,26 @@ extension UdacityClient {
     }
     
     func getUserData(userID: String, completionHandler: (success: Bool, error: NSError?) -> Void) {
-        /* 1. Specify parameters, method (if has {key}), and HTTP body (if POST) */
         let parameters = [String : AnyObject]()
         
         var mutableMethod : String = Methods.User
-        mutableMethod = UdacityClient.subtituteKeyInMethod(mutableMethod, key: UdacityClient.URLKeys.UserID, value: String(UdacityClient.sharedInstance().userID!))!
+        mutableMethod = UdacityClient.subtituteKeyInMethod(mutableMethod, key: UdacityClient.URLKeys.UserID, value: String(self.userID!))!
         
         let task = taskForGETMethod(mutableMethod, parameters: parameters) { JSONResult, error in
-            
+            if let error = error {
+                completionHandler(success: false, error: error)
+            } else {
+                if let userData = JSONResult["user"] as? [String: AnyObject] {
+                    self.user = UdacityUser(dictionary: JSONResult["user"] as! [String: AnyObject])
+                    println(self.user)
+                    completionHandler(success: true, error: error)
+                }
+                else {
+                    completionHandler(success: false, error: NSError(domain: "getUserData",
+                        code: 0,
+                        userInfo: [NSLocalizedDescriptionKey: "Unable to get user data"]))
+                }
+            }
         }
     }
 

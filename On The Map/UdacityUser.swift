@@ -8,11 +8,12 @@
 
 struct UdacityUser {
     
-    var name = ""
-    var website = ""
+    var lastName = ""
+    var firstName = ""
     
     init(dictionary: [String: AnyObject]) {
-        
+        lastName = dictionary["last_name"] as! String
+        firstName = dictionary["first_name"] as! String
     }
     
 }

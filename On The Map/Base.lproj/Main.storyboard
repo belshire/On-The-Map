@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sUN-tp-XnM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -29,7 +29,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hNJ-P0-gcI">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hNJ-P0-gcI">
                                 <rect key="frame" x="14" y="339" width="573" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -65,8 +65,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiC-Ea-Jp2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiC-Ea-Jp2">
                                 <rect key="frame" x="16" y="477" width="571" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9to-eV-IqQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -78,13 +81,12 @@
                             <constraint firstAttribute="centerX" secondItem="YtE-tw-Jhx" secondAttribute="centerX" constant="-0.5" id="26i-l6-Ee0"/>
                             <constraint firstItem="zpJ-FW-grb" firstAttribute="height" secondItem="hNJ-P0-gcI" secondAttribute="height" id="6bH-2O-7r7"/>
                             <constraint firstAttribute="centerX" secondItem="zpJ-FW-grb" secondAttribute="centerX" constant="-3.5" id="AEj-dT-5Kq"/>
-                            <constraint firstItem="CiC-Ea-Jp2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Bum-x9-xKV"/>
                             <constraint firstItem="zpJ-FW-grb" firstAttribute="top" secondItem="10q-OX-icu" secondAttribute="bottom" constant="19" id="CIh-Yg-PSb"/>
-                            <constraint firstAttribute="centerX" secondItem="CiC-Ea-Jp2" secondAttribute="centerX" constant="-1.5" id="E5W-9c-og9"/>
                             <constraint firstItem="zpJ-FW-grb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-2" id="EAj-oR-LXr"/>
                             <constraint firstAttribute="centerX" secondItem="F9Z-ye-FIS" secondAttribute="centerX" constant="-3" id="Ekv-8D-W1t"/>
                             <constraint firstItem="YtE-tw-Jhx" firstAttribute="top" secondItem="hNJ-P0-gcI" secondAttribute="bottom" constant="13" id="EnS-vl-vEO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zpJ-FW-grb" secondAttribute="trailing" constant="-3" id="GFi-kC-1Ld"/>
+                            <constraint firstItem="CiC-Ea-Jp2" firstAttribute="leading" secondItem="F9Z-ye-FIS" secondAttribute="leading" id="HXS-3w-SiV"/>
                             <constraint firstItem="10q-OX-icu" firstAttribute="top" secondItem="QQN-fc-nsZ" secondAttribute="bottom" constant="33" id="Hj5-la-qx9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YtE-tw-Jhx" secondAttribute="trailing" constant="-6" id="LhC-Jv-XeU"/>
                             <constraint firstItem="YtE-tw-Jhx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Loa-d6-O7g"/>
@@ -97,22 +99,22 @@
                             <constraint firstAttribute="trailingMargin" secondItem="F9Z-ye-FIS" secondAttribute="trailing" constant="-6" id="aCE-di-ZsY"/>
                             <constraint firstAttribute="centerX" secondItem="zpJ-FW-grb" secondAttribute="centerX" constant="-0.5" id="box-48-Qlw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hNJ-P0-gcI" secondAttribute="trailing" constant="-6" id="clO-Ry-sjp"/>
-                            <constraint firstItem="YtE-tw-Jhx" firstAttribute="top" secondItem="hNJ-P0-gcI" secondAttribute="bottom" constant="13" id="czl-P7-tfD"/>
+                            <constraint firstItem="YtE-tw-Jhx" firstAttribute="top" secondItem="hNJ-P0-gcI" secondAttribute="bottom" constant="12" id="czl-P7-tfD"/>
                             <constraint firstAttribute="centerX" secondItem="F9Z-ye-FIS" secondAttribute="centerX" constant="-3" id="eSu-RM-4Hi"/>
                             <constraint firstItem="F9Z-ye-FIS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gTo-Va-Aju"/>
                             <constraint firstAttribute="centerX" secondItem="QQN-fc-nsZ" secondAttribute="centerX" id="hXh-Fx-axN"/>
-                            <constraint firstItem="CiC-Ea-Jp2" firstAttribute="top" secondItem="F9Z-ye-FIS" secondAttribute="bottom" constant="8" id="ir9-yC-APb"/>
+                            <constraint firstItem="CiC-Ea-Jp2" firstAttribute="top" secondItem="F9Z-ye-FIS" secondAttribute="bottom" constant="8" symbolic="YES" id="i7c-GF-LBm"/>
                             <constraint firstItem="zpJ-FW-grb" firstAttribute="top" secondItem="10q-OX-icu" secondAttribute="bottom" constant="8" id="jna-c3-F3K"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hNJ-P0-gcI" secondAttribute="trailing" constant="-3" id="kPR-Kk-JDG"/>
                             <constraint firstItem="YtE-tw-Jhx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-2" id="kXd-Kp-0OC"/>
                             <constraint firstItem="hNJ-P0-gcI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="1" id="kaO-zL-VRq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CiC-Ea-Jp2" secondAttribute="trailing" constant="-3" id="kgx-wN-iGY"/>
                             <constraint firstItem="QQN-fc-nsZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="53" id="lGB-Bs-Kta"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hNJ-P0-gcI" secondAttribute="trailing" constant="-3" id="okW-Xd-lWu"/>
-                            <constraint firstItem="hNJ-P0-gcI" firstAttribute="top" secondItem="zpJ-FW-grb" secondAttribute="bottom" constant="13" id="p5M-uw-hGp"/>
+                            <constraint firstItem="hNJ-P0-gcI" firstAttribute="top" secondItem="zpJ-FW-grb" secondAttribute="bottom" constant="14" id="p5M-uw-hGp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F9Z-ye-FIS" secondAttribute="trailing" constant="-6" id="pjc-qI-kNs"/>
                             <constraint firstAttribute="centerX" secondItem="10q-OX-icu" secondAttribute="centerX" constant="-0.5" id="rFr-ka-MxA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YtE-tw-Jhx" secondAttribute="trailing" constant="-3" id="sPH-ef-q4s"/>
+                            <constraint firstItem="CiC-Ea-Jp2" firstAttribute="trailing" secondItem="YtE-tw-Jhx" secondAttribute="trailing" id="toQ-uA-l3e"/>
                             <constraint firstItem="10q-OX-icu" firstAttribute="top" secondItem="QQN-fc-nsZ" secondAttribute="bottom" constant="22" id="uU6-yj-ADD"/>
                             <constraint firstItem="hNJ-P0-gcI" firstAttribute="top" secondItem="zpJ-FW-grb" secondAttribute="bottom" constant="13" id="udP-Uz-eRN"/>
                             <constraint firstItem="zpJ-FW-grb" firstAttribute="height" secondItem="hNJ-P0-gcI" secondAttribute="height" id="xfc-ly-Wb9"/>
@@ -176,7 +178,7 @@
         <!--Item 1-->
         <scene sceneID="Y3A-Io-2tF">
             <objects>
-                <viewController id="PdQ-Mz-tCQ" sceneMemberID="viewController">
+                <viewController id="PdQ-Mz-tCQ" customClass="MapViewController" customModule="On_The_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gyg-gc-1eC"/>
                         <viewControllerLayoutGuide type="bottom" id="7HC-7e-phn"/>
@@ -185,22 +187,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FEM-5R-I36">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FEM-5R-I36">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                             </mapView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Be2-T5-o4O">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Be2-T5-o4O">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="On The Map" id="u5F-lS-tyb">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" id="bPK-nZ-rKf"/>
+                                        <barButtonItem key="leftBarButtonItem" image="Pin Icon" id="bPK-nZ-rKf"/>
                                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ycW-9t-X3h"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Be2-T5-o4O" secondAttribute="trailing" constant="-16" id="406-FE-rxc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FEM-5R-I36" secondAttribute="trailing" constant="-16" id="E8l-1m-guu"/>
+                            <constraint firstItem="7HC-7e-phn" firstAttribute="top" secondItem="FEM-5R-I36" secondAttribute="bottom" id="F8q-ZB-VDs"/>
+                            <constraint firstItem="Be2-T5-o4O" firstAttribute="top" secondItem="Gyg-gc-1eC" secondAttribute="bottom" id="JLC-OS-F4S"/>
+                            <constraint firstItem="7HC-7e-phn" firstAttribute="top" secondItem="Be2-T5-o4O" secondAttribute="bottom" constant="487" id="Qeo-rb-dES"/>
+                            <constraint firstItem="Be2-T5-o4O" firstAttribute="leading" secondItem="H3B-qE-k87" secondAttribute="leadingMargin" constant="-16" id="fcA-mP-CWi"/>
+                            <constraint firstItem="FEM-5R-I36" firstAttribute="top" secondItem="H3B-qE-k87" secondAttribute="topMargin" id="i8Y-NK-htc"/>
+                            <constraint firstItem="FEM-5R-I36" firstAttribute="leading" secondItem="H3B-qE-k87" secondAttribute="leadingMargin" constant="-16" id="vel-py-5iG"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Qeo-rb-dES"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="nJr-eS-zaJ"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" selectedImage="Pin Icon" id="nJr-eS-zaJ"/>
+                    <connections>
+                        <outlet property="mapView" destination="FEM-5R-I36" id="Meo-Tw-JRS"/>
+                        <outlet property="navigationBar" destination="Be2-T5-o4O" id="XhD-jn-gym"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23C-1Y-ODu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,7 +230,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="NG5-rz-frd">
             <objects>
-                <tabBarController id="sUN-tp-XnM" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MapTabController" id="sUN-tp-XnM" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="fTf-Wa-dmj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -228,5 +249,6 @@
     </scenes>
     <resources>
         <image name="Logo" width="150" height="150"/>
+        <image name="Pin Icon" width="44" height="44"/>
     </resources>
 </document>
