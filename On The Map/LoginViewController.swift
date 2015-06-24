@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Blake Elshire. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class LoginViewController: UIViewController {
