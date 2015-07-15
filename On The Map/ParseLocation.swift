@@ -29,6 +29,9 @@ struct ParseLocation {
 
         mapString = dictionary["mapString"] as? String
         mediaURL = dictionary["mediaURL"] as? String
+        
+        objectId = dictionary["objectId"] as? String
+        uniqueKey = dictionary["uniqueKey"] as? String
     }
     
     /* Helper: Given an array of dictionaries, convert them to an array of ParseLocation objects */
