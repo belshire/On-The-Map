@@ -62,7 +62,6 @@ extension UdacityClient {
             } else {
                 if let userData = JSONResult["user"] as? [String: AnyObject] {
                     self.user = UdacityUser(dictionary: JSONResult["user"] as! [String: AnyObject])
-                    println(self.user)
                     completionHandler(success: true, error: error)
                 }
                 else {

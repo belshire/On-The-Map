@@ -32,7 +32,6 @@ class SetLocationViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func findOnMap(sender: AnyObject) {
         CLGeocoder().geocodeAddressString(locationTextView.text!) { placemarks, error in
-            println(placemarks)
             if let places = placemarks {
                 var topResult: CLPlacemark = places[0] as! CLPlacemark
                 var placemark: MKPlacemark = MKPlacemark(placemark: topResult)
