@@ -8,8 +8,8 @@
 
 struct UdacityUser {
     
-    var lastName = ""
-    var firstName = ""
+    var lastName: String = ""
+    var firstName: String = ""
     
     init(dictionary: [String: AnyObject]) {
         lastName = dictionary["last_name"] as! String
